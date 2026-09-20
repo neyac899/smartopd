@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" fill="none">
+  <rect x="2" y="6" width="36" height="36" rx="10" fill="#063a63"/>
+  <!-- Cross and queue waves -->
+  <path d="M20 13V35M9 24H31" stroke="#12b8c6" stroke-width="4.5" stroke-linecap="round"/>
+  <circle cx="20" cy="24" r="3.5" fill="#ffffff"/>
+  <!-- Smart pulse dot -->
+  <circle cx="31" cy="13" r="3" fill="#dc3f50"/>
+  <!-- Typography -->
+  <text x="46" y="27" font-family="'Public Sans', system-ui, -apple-system, sans-serif" font-size="19" font-weight="800" fill="#063a63" letter-spacing="-0.5">Smart<tspan fill="#12b8c6">OPD</tspan></text>
+  <text x="47" y="38" font-family="'Public Sans', system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="700" fill="#607d8b" letter-spacing="0.5">CIVIC HEALTH QUEUE</text>
+</svg>

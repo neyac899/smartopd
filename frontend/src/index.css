@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f4faff;
+    color: #0d1d25;
+    font-family: 'Public Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+  body {
+    overscroll-behavior-y: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  /* Tabular numbers for queue tokens and clocks */
+  .tabular-token {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer components {
+  /* Civic Care Button Styles - strict 52px height */
+  .btn-primary {
+    @apply min-h-[52px] px-space-md bg-primary-container text-on-primary rounded-lg font-bold text-[16px] transition-all duration-150 flex items-center justify-center gap-2 shadow-sm active:scale-[0.98] hover:bg-[#042a4a] disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-secondary {
+    @apply min-h-[52px] px-space-md bg-secondary text-on-secondary rounded-lg font-bold text-[16px] transition-all duration-150 flex items-center justify-center gap-2 shadow-sm active:scale-[0.98] hover:brightness-110 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-action-teal {
+    @apply min-h-[52px] px-space-md bg-secondary-action text-primary-container rounded-lg font-bold text-[16px] transition-all duration-150 flex items-center justify-center gap-2 shadow-sm active:scale-[0.98] hover:brightness-105 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-urgent {
+    @apply min-h-[52px] px-space-md bg-surface-container-lowest border-2 border-error text-error rounded-lg font-bold text-[16px] transition-all duration-150 flex items-center justify-center gap-2 shadow-sm active:scale-[0.98] hover:bg-error/5 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-outline {
+    @apply min-h-[52px] px-space-md bg-surface-container hover:bg-surface-container-high text-primary rounded-lg font-bold text-[15px] transition-all duration-150 flex items-center justify-center gap-2 disabled:opacity-50;
+  }
+
+  /* Civic Care Cards */
+  .civic-card {
+    @apply bg-surface-container-lowest rounded-xl p-space-md shadow-[0_2px_8px_rgba(6,58,99,0.06)] border border-[#d0e1ec];
+  }
+
+  .civic-card-active {
+    @apply bg-surface-container-lowest rounded-xl p-space-md shadow-[0_8px_24px_rgba(6,58,99,0.14)] border-2 border-primary-container;
+  }
+
+  /* Form Input Styling */
+  .civic-input {
+    @apply min-h-[52px] w-full px-space-md bg-surface-container-lowest border-2 border-[#d0e1ec] rounded-lg text-primary text-[16px] placeholder:text-outline-variant focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-secondary-action/20 transition-all;
+  }
+
+  /* Status Chips */
+  .chip-waiting {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#eef7fc] border border-primary-container text-primary-container;
+  }
+
+  .chip-in-consultation {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#e3fbfd] border border-[#0fa1ad] text-[#055157];
+  }
+
+  .chip-completed {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 border border-emerald-600 text-emerald-800;
+  }
+
+  .chip-action-required {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#fdebee] border border-[#dc3f50] text-[#941926];
+  }
+
+  .chip-priority {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-extrabold uppercase tracking-wide bg-amber-100 text-amber-900 border border-amber-400;
+  }
+}
+
+/* Material symbol icons helper */
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+  vertical-align: middle;
+}
+
+.material-symbols-outlined.fill {
+  font-variation-settings:
+    'FILL' 1,
+    'wght' 500,
+    'GRAD' 0,
+    'opsz' 24;
+}
